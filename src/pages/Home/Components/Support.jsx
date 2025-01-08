@@ -28,7 +28,7 @@ function Support() {
       <div className="relative w-full  min-h-screen md:h-[900px] flex flex-col md:flex-row items-center">
         {/* Spline container */}
         <div className="absolute hidden md:flex  inset-0 md:relative md:w-1/2 h-[100vh] md:order-2">
-          <Suspense fallback={<div className="w-full h-full bg-gray-100 animate-pulse"></div>}>
+          <Suspense fallback={<div className="bg-inherit"></div>}>
             {isSplineLoaded && (
               <Spline 
                 className="w-full z-auto h-full object-cover"
@@ -40,7 +40,7 @@ function Support() {
         </div>
 
         {/* Text content */}
-        <div className="relative z-10 w-full md:w-1/2 h-full flex items-center md:order-1  bg-opacity-80 md:bg-opacity-100">
+        <div className="relative z-10 w-full md:ml-10 md:w-1/2 h-full flex items-center md:order-1  bg-opacity-80 md:bg-opacity-100">
           <motion.div
             className="text-[#1f1f1f] font-bold px-6 md:px-12 py-12 md:py-0 text-[4.6rem] leading-[5rem] sm:text-[3.5rem] md:text-[8vw] md:leading-[7.6vw] w-full  uppercase"
             initial="hidden"
